@@ -1,19 +1,8 @@
-import {useMemo} from "react";
-import {useDispatch} from "react-redux";
-import {addPositions} from "./store/positions/position-actions";
-import data from './mock/data.json'
-
 import TheHeader from "./components/TheHeader";
-import FilterPanel from "./components/FilterPanel";
-import JobList from "./components/JobList";
+import FilterPanel from "./features/filter/FilterPanel";
+import JobList from "./features/positions/JobList";
 
 function App() {
-    const dispatch = useDispatch()
-
-    useMemo(() => {
-        dispatch(addPositions(data))
-    }, [dispatch])
-
     return (
         <>
             <TheHeader />
